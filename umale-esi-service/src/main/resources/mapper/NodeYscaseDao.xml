@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.citycloud.umale.esi.dao.province.NodeYscaseDao">
+
+    <!--auto generated Code-->
+    <sql id="all_column">
+        CASEID,
+        TYPE,
+        REPEALREASON,
+        NODENAME,
+        WRITNUMBER,
+        SYSDEPT,
+        CASEINTRO,
+        LEGALBASIS,
+        EVIDENCEDATA,
+        ENDTIME,
+        CASEDEPTKEY,
+        CASEDEPTNAME,
+        REMARK,
+        OPRATIONTIME,
+        AREACODE,
+        FLAG,
+        DATAVERVISON,
+        BELONGTOSYSTEM,
+        SYNC_STATUS,
+        CF_SJLY,
+        CF_SJLYDM,
+        EXTEND_1,
+        EXTEND_2,
+        EXTEND_3,
+        EXTEND_4,
+        EXTEND_5,
+        OP,
+        TONG_TIME
+    </sql>
+
+    <!--auto generated Code-->
+    <insert id="insertList" parameterType="java.util.List" useGeneratedKeys="false">
+        INSERT INTO FDS_NODE_YSCASE_V2 (
+        <include refid="all_column"/>
+        )
+        <foreach collection="pojos" item="pojo" index="" separator="union all">
+            (
+            select
+            #{pojo.caseid},
+            #{pojo.type},
+            #{pojo.repealreason},
+            #{pojo.nodename},
+            #{pojo.writnumber},
+            #{pojo.sysdept},
+            #{pojo.caseintro},
+            #{pojo.legalbasis},
+            #{pojo.evidencedata},
+            #{pojo.endtime},
+            #{pojo.casedeptkey},
+            #{pojo.casedeptname},
+            #{pojo.remark},
+            #{pojo.oprationtime},
+            #{pojo.areacode},
+            #{pojo.flag},
+            #{pojo.datavervison},
+            #{pojo.belongtosystem},
+            #{pojo.sync_status},
+            #{pojo.cf_sjly},
+            #{pojo.cf_sjlydm},
+            #{pojo.extend_1},
+            #{pojo.extend_2},
+            #{pojo.extend_3},
+            #{pojo.extend_4},
+            #{pojo.extend_5},
+            #{pojo.op},
+            #{pojo.tong_time}
+            from dual
+            )
+        </foreach>
+    </insert>
+</mapper>
+

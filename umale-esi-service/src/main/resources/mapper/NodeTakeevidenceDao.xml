@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.citycloud.umale.esi.dao.province.NodeTakeevidenceDao">
+
+    <!--auto generated Code-->
+    <sql id="all_column">
+        SOURCEKEY,
+        CASEID,
+        CASENAME,
+        NODENAME,
+        PARTYNAMES,
+        STARTTIME,
+        ENDTIME,
+        SURVEYPERSONNAME,
+        SURVEYPERSONID,
+        SURVEYPASS,
+        FACT,
+        PUNISHOPINION,
+        oprationtime,
+        XZHANDLEPERSON,
+        XZHANDLEPERSONID,
+        CASEDEPTKEY,
+        CASEDEPTNAME,
+        REMARK,
+        AREACODE,
+        FLAG,
+        DATAVERVISON,
+        BELONGTOSYSTEM,
+        SYNC_STATUS,
+        CF_SJLY,
+        CF_SJLYDM,
+        EXTEND_1,
+        EXTEND_2,
+        EXTEND_3,
+        EXTEND_4,
+        EXTEND_5,
+        OP,
+        TONG_TIME
+    </sql>
+
+
+    <!--auto generated Code-->
+    <insert id="insertSelective" parameterType="com.citycloud.umale.esi.po.NodeTakeevidence">
+        INSERT INTO FDS_NODE_TAKEEVIDENCE_V2
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="pojo.sourcekey!=null"> SOURCEKEY,</if>
+            <if test="pojo.caseid!=null"> CASEID,</if>
+            <if test="pojo.casename!=null"> CASENAME,</if>
+            <if test="pojo.nodename!=null"> NODENAME,</if>
+            <if test="pojo.partynames!=null"> PARTYNAMES,</if>
+            <if test="pojo.starttime!=null"> STARTTIME,</if>
+            <if test="pojo.endtime!=null"> ENDTIME,</if>
+            <if test="pojo.surveypersonname!=null"> SURVEYPERSONNAME,</if>
+            <if test="pojo.surveypersonid!=null"> SURVEYPERSONID,</if>
+            <if test="pojo.surveypass!=null"> SURVEYPASS,</if>
+            <if test="pojo.fact!=null"> FACT,</if>
+            <if test="pojo.punishopinion!=null"> PUNISHOPINION,</if>
+            <if test="pojo.oprationtime!=null"> OPRATIONTIME,</if>
+            <if test="pojo.xzhandleperson!=null"> XZHANDLEPERSON,</if>
+            <if test="pojo.xzhandlepersonid!=null"> XZHANDLEPERSONID,</if>
+            <if test="pojo.casedeptkey!=null"> CASEDEPTKEY,</if>
+            <if test="pojo.casedeptname!=null"> CASEDEPTNAME,</if>
+            <if test="pojo.remark!=null"> REMARK,</if>
+            <if test="pojo.areacode!=null"> AREACODE,</if>
+            <if test="pojo.flag!=null"> FLAG,</if>
+            <if test="pojo.datavervison!=null"> DATAVERVISON,</if>
+            <if test="pojo.belongtosystem!=null"> BELONGTOSYSTEM,</if>
+            <if test="pojo.sync_status!=null"> SYNC_STATUS,</if>
+            <if test="pojo.cf_sjly!=null"> CF_SJLY,</if>
+            <if test="pojo.cf_sjlydm!=null"> CF_SJLYDM,</if>
+            <if test="pojo.extend_1!=null"> EXTEND_1,</if>
+            <if test="pojo.extend_2!=null"> EXTEND_2,</if>
+            <if test="pojo.extend_3!=null"> EXTEND_3,</if>
+            <if test="pojo.extend_4!=null"> EXTEND_4,</if>
+            <if test="pojo.extend_5!=null"> EXTEND_5,</if>
+            <if test="pojo.op!=null"> OP,</if>
+            <if test="pojo.tong_time!=null"> TONG_TIME,</if>
+        </trim>
+        VALUES
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="pojo.sourcekey!=null">#{pojo.sourcekey},</if>
+            <if test="pojo.caseid!=null">#{pojo.caseid},</if>
+            <if test="pojo.casename!=null">#{pojo.casename},</if>
+            <if test="pojo.nodename!=null">#{pojo.nodename},</if>
+            <if test="pojo.partynames!=null">#{pojo.partynames},</if>
+            <if test="pojo.starttime!=null">#{pojo.starttime},</if>
+            <if test="pojo.endtime!=null">#{pojo.endtime},</if>
+            <if test="pojo.surveypersonname!=null">#{pojo.surveypersonname},</if>
+            <if test="pojo.surveypersonid!=null">#{pojo.surveypersonid},</if>
+            <if test="pojo.surveypass!=null">#{pojo.surveypass},</if>
+            <if test="pojo.fact!=null">#{pojo.fact},</if>
+            <if test="pojo.punishopinion!=null">#{pojo.punishopinion},</if>
+            <if test="pojo.oprationtime!=null">#{pojo.oprationtime},</if>
+            <if test="pojo.xzhandleperson!=null">#{pojo.xzhandleperson},</if>
+            <if test="pojo.xzhandlepersonid!=null">#{pojo.xzhandlepersonid},</if>
+            <if test="pojo.casedeptkey!=null">#{pojo.casedeptkey},</if>
+            <if test="pojo.casedeptname!=null">#{pojo.casedeptname},</if>
+            <if test="pojo.remark!=null">#{pojo.remark},</if>
+            <if test="pojo.areacode!=null">#{pojo.areacode},</if>
+            <if test="pojo.flag!=null">#{pojo.flag},</if>
+            <if test="pojo.datavervison!=null">#{pojo.datavervison},</if>
+            <if test="pojo.belongtosystem!=null">#{pojo.belongtosystem},</if>
+            <if test="pojo.sync_status!=null">#{pojo.sync_status},</if>
+            <if test="pojo.cf_sjly!=null">#{pojo.cf_sjly},</if>
+            <if test="pojo.cf_sjlydm!=null">#{pojo.cf_sjlydm},</if>
+            <if test="pojo.extend_1!=null">#{pojo.extend_1},</if>
+            <if test="pojo.extend_2!=null">#{pojo.extend_2},</if>
+            <if test="pojo.extend_3!=null">#{pojo.extend_3},</if>
+            <if test="pojo.extend_4!=null">#{pojo.extend_4},</if>
+            <if test="pojo.extend_5!=null">#{pojo.extend_5},</if>
+            <if test="pojo.op!=null">#{pojo.op},</if>
+            <if test="pojo.tong_time!=null">#{pojo.tong_time},</if>
+        </trim>
+    </insert>
+
+    <!--auto generated Code-->
+    <insert id="insertList" parameterType="java.util.List" useGeneratedKeys="false">
+        INSERT INTO FDS_NODE_TAKEEVIDENCE_V2 (
+        <include refid="all_column"/>
+        )
+        <foreach collection="pojos" item="pojo" index="" separator="union all">
+            (
+            select
+            #{pojo.sourcekey},
+            #{pojo.caseid},
+            #{pojo.casename},
+            #{pojo.nodename},
+            #{pojo.partynames},
+            #{pojo.starttime},
+            #{pojo.endtime},
+            #{pojo.surveypersonname},
+            #{pojo.surveypersonid},
+            #{pojo.surveypass},
+            #{pojo.fact},
+            #{pojo.punishopinion},
+            #{pojo.oprationtime},
+            #{pojo.xzhandleperson},
+            #{pojo.xzhandlepersonid},
+            #{pojo.casedeptkey},
+            #{pojo.casedeptname},
+            #{pojo.remark},
+            #{pojo.areacode},
+            #{pojo.flag},
+            #{pojo.datavervison},
+            #{pojo.belongtosystem},
+            #{pojo.sync_status},
+            #{pojo.cf_sjly},
+            #{pojo.cf_sjlydm},
+            #{pojo.extend_1},
+            #{pojo.extend_2},
+            #{pojo.extend_3},
+            #{pojo.extend_4},
+            #{pojo.extend_5},
+            #{pojo.op},
+            #{pojo.tong_time}
+            from dual
+            )
+        </foreach>
+    </insert>
+</mapper>
+
