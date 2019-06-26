@@ -70,6 +70,13 @@
             </snapshots>
         </repository>
     </repositories>
+    <distributionManagement>
+        <repository>
+            <id>releases</id>
+            <name>Nexus Repository release</name>
+            <url>http://10.10.77.62:8036/nexus/content/repositories/releases</url>
+        </repository>
+    </distributionManagement>
 
 
 
